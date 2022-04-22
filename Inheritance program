@@ -1,0 +1,40 @@
+class Parent{
+	int a;
+	Parent()
+	{
+		System.out.println("Parent class default constructor");
+	}
+Parent(int a){
+	this.a=a;
+System.out.println("Parent class Parameter constructor");
+
+}
+void disparent() {
+	System.out.println("a="+a);
+}
+}
+class child extends Parent{
+	int b;
+	child(){
+		System.out.println("Child class default");
+	}
+   child(int a,int b){
+	   super(a);
+      System.out.println("Child class Parameter");
+      this.b=b;
+      super.a=a;
+}
+ void dischild() {
+	 disparent();
+ System.out.println("b="+b);	 
+ }
+}
+public class javaInhheritance {
+
+	public static void main(String[] args) {
+	child obj=new child();
+	child obj2=new child(5,9);
+	obj.dischild();
+	obj.dischild();
+	}
+}
